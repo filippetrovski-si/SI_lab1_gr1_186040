@@ -1,3 +1,4 @@
+import java.util.ArrayList<E>
 class Student {
 	String index;
 	String firstName;
@@ -61,5 +62,15 @@ class Student {
 			return true
 		else
 			return false;
+	}
+}
+class Course {
+	List<Student> studenti = new ArrayList<Student>();
+	public boolean dodajstudent(Student student){
+		if (student==null || studenti.contains(student)) {
+			return false;
+		}
+		studenti.add(student);
+		return true;
 	}
 }
